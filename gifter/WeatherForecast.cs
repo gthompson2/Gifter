@@ -1,6 +1,6 @@
 using System;
 
-namespace gifter
+namespace Gifter
 {
     public class WeatherForecast
     {
