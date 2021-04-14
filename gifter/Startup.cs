@@ -35,6 +35,7 @@ namespace Gifter
             });
 
             services.AddTransient<IPostRepository, PostRepository>();
+            services.AddTransient<IUserProfileRepository, UserProfileRepository>();
 
 
         }
