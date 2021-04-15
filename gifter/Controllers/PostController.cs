@@ -82,5 +82,21 @@ namespace Gifter.Controllers
             _postRepository.Delete(id);
             return NoContent();
         }
+
+        // https://localhost:5001/api/post/search?q=p&sortDesc=false
+
+        [HttpGet("search")]
+        public IActionResult Search(string q, bool sortDesc)
+        {
+            return Ok(_postRepository.Search(q, sortDesc));
+        }
+
+        // https://localhost:5001/api/post/hottest?since=<SOME_DATE>
+
+        [HttpGet("hottest")]
+        public IActionResult Hottest(DateTime since)
+        {
+            return Ok(_postRepository.Hottest(since));
+        }
     }
 }
